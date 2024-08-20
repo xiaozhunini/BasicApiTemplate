@@ -1,14 +1,15 @@
 ﻿using MyWeb.Modles;
 using MyWeb.Service.IService;
+using WebApplication1.Data;
 
 namespace MyWeb.Service
 {
     public class UserService : IUserService
     {
-        public User userList()
+        public int userList()
         {
-
-            return new User();
+            
+            return 1;
         }
     }
 }

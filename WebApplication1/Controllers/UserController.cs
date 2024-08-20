@@ -1,11 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MyWeb.Modles;
 using MyWeb.Service.IService;
+using WebApplication1.Config;
 
 namespace MyWeb.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("[controller]/[action]")]
     public class UserController : Controller
     {
         private readonly IUserService _userService;
@@ -17,9 +18,13 @@ namespace MyWeb.Controllers
 
         }
         [HttpGet]
-        public ActionResult<User> userAll()
+        public ActionResult<int> userAll()
         {
+            DataDemo dataDemo = new DataDemo();
+            dataDemo.DataDemoText();
             return _userService.userList();
         }
+
+                
     }
 }

@@ -4,6 +4,6 @@ namespace MyWeb.Service.IService
 {
     public interface IUserService
     {
-        public User userList();
+        public int userList();
     }
 }
